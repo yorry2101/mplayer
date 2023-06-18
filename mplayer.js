@@ -5,7 +5,10 @@ for (var i=0; i<listitems.length; i++){
     listitems[i].addEventListener('click',
         (e)=>{
             var li = e.target;
-            console.log(li);
+            var file = li.getAttribte('data-file');
+            var audio = document.querySelector('audio');
+            audio.setAttribute('src', file);
+            audio.play();
         }
     );
 }
