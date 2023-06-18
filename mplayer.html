@@ -10,19 +10,9 @@
     <p>※音量注意</p>
     <img src="arona_portrait.png" alt="stop">
     <audio src="AniPicBGM3.mp3" controls></audio>
-    <script>
-      function getYoubi(year, month, day){
-        var youbi = ['日', '月', '火', '水', '木', '金', '土'];
-        var date = new Date(year, month+1, day);
-        return youbi[date.getDay()]+'曜日';
-      }
-
-      document.write('<p>1985年3月10日は'+getYoubi(1985, 3, 10)+'</p>');
-      document.write('<p>2001年3月10日は'+getYoubi(2001, 3, 10)+'</p>');
-      document.write('<p>2018年3月10日は'+getYoubi(2018, 3, 10)+'</p>');
-      for(var i=0; i<7; i++){
-        document.write('<p>2023年3月'+(10+i)+'日は'+getYoubi(2023, 3, 10+i)+'</p>');
-      }
-    </script>
+    <ul>
+      <li data-file="AniPicBGM3.mp3">music No.1</li>
+      <li data-file="RUN.EVE.RUNpart1.mp3">music No.2</li>
+    </ul>
   </body>
 </html>
