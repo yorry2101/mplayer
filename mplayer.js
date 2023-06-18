@@ -5,17 +5,20 @@ for (var i=0; i<listitems.length; i++){
     listitems[i].addEventListener('click',
         (e)=>{
             var li = e.target;
-            var file = li.getAttribute('data-file');
-            var audio = document.querySelector('audio');
-            audio.setAttribute('src', file);
-            audio.play();
-            // activeな項目を変更
-            var activeli = document.querySelector('.active');
-
-            activeli.className = '';
-            li.className = 'active';
+            playMusic(li);
         }
     );
+}
+
+function playMusic(li){
+    var file = li.getAttribute('data-file');
+    var audio = document.querySelector('audio');
+    audio.setAttribute('src', file);
+    audio.play();
+    // activeな項目を変更
+    var activeli = document.querySelector('.active');
+    activeli.className = '';
+    li.className = 'active';
 }
 
 // 再生中と停止中でイラストを切り替える
@@ -40,9 +43,9 @@ audio.addEventListener('ended',
     img.setAttribute('src', 'arona_portrait_2.png');
     // 次の曲に切り替え
     var activeli = document.querySelector('.active');
-
     var nextli = activeli.nextElementSibling;
-    console.log('active '+activeli+activeli.getAttribute('data-file'));
-    console.log('next '+nextli+nextli.getAttribute('data-file'));
+    if(nextli != null){
+        playMusic(nextli);
+    }
   }
 );
