@@ -49,3 +49,15 @@ audio.addEventListener('ended',
     }
   }
 );
+
+// ランダム選曲機能
+var random = document.querySelector('.random');
+random.addEventListener('click',
+  (e)=>{
+    e.preventDefault();
+    var listitems = document.querySelectorAll('li');
+    var len = listitems.length;
+    var rnd = Math.floor(Math.random() * len);
+    playMusic(listitems[rnd]);
+  }
+);
