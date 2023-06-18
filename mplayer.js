@@ -17,3 +17,18 @@ for (var i=0; i<listitems.length; i++){
         }
     );
 }
+
+// 再生中と停止中でイラストを切り替える
+var audio = document.querySelector('audio');
+audio.addEventListener('play',
+    (e)=>{
+        var img = document.querySelector('img');
+        img.setAttribute('src', 'arona_portrait.png');
+    }
+);
+audio.addEventListener('pause',
+    (e)=>{
+        var img = document.querySelector('img');
+        img.setAttribute('src', 'arona_portrait_2.png');
+    }
+);
