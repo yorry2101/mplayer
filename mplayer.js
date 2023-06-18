@@ -32,3 +32,17 @@ audio.addEventListener('pause',
         img.setAttribute('src', 'arona_portrait_2.png');
     }
 );
+
+//曲を最後まで再生したとき
+audio.addEventListener('ended',
+  (e)=>{
+    var img = document.querySelector('img');
+    img.setAttribute('src', 'arona_portrait_2.png');
+    // 次の曲に切り替え
+    var activeli = document.querySelector('.active');
+
+    var nextli = activeli.nextElementSibling;
+    console.log('active '+activeli+activeli.getAttribute('data-file'));
+    console.log('next '+nextli+nextli.getAttribute('data-file'));
+  }
+);
