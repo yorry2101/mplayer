@@ -9,6 +9,11 @@ for (var i=0; i<listitems.length; i++){
             var audio = document.querySelector('audio');
             audio.setAttribute('src', file);
             audio.play();
+            // activeな項目を変更
+            var activeli = document.querySelector('.active');
+
+            activeli.className = '';
+            li.className = 'active';
         }
     );
 }
