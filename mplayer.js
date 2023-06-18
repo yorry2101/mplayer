@@ -26,13 +26,13 @@ var audio = document.querySelector('audio');
 audio.addEventListener('play',
     (e)=>{
         var img = document.querySelector('img');
-        img.setAttribute('src', 'pict_stop.png');
+        img.setAttribute('src', 'pict_play.png');
     }
 );
 audio.addEventListener('pause',
     (e)=>{
         var img = document.querySelector('img');
-        img.setAttribute('src', 'pict_play.png');
+        img.setAttribute('src', 'pict_stop.png');
     }
 );
 
