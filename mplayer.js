@@ -26,13 +26,13 @@ var audio = document.querySelector('audio');
 audio.addEventListener('play',
     (e)=>{
         var img = document.querySelector('img');
-        img.setAttribute('src', 'arona_portrait.png');
+        img.setAttribute('src', 'pict_stop.png');
     }
 );
 audio.addEventListener('pause',
     (e)=>{
         var img = document.querySelector('img');
-        img.setAttribute('src', 'arona_portrait_2.png');
+        img.setAttribute('src', 'pict_paly.png');
     }
 );
 
@@ -40,7 +40,7 @@ audio.addEventListener('pause',
 audio.addEventListener('ended',
   (e)=>{
     var img = document.querySelector('img');
-    img.setAttribute('src', 'arona_portrait_2.png');
+    img.setAttribute('src', 'pict_paly.png');
     // 次の曲に切り替え
     var activeli = document.querySelector('.active');
     var nextli = activeli.nextElementSibling;
