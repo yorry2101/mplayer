@@ -32,7 +32,7 @@ audio.addEventListener('play',
 audio.addEventListener('pause',
     (e)=>{
         var img = document.querySelector('img');
-        img.setAttribute('src', 'pict_paly.png');
+        img.setAttribute('src', 'pict_play.png');
     }
 );
 
@@ -40,7 +40,7 @@ audio.addEventListener('pause',
 audio.addEventListener('ended',
   (e)=>{
     var img = document.querySelector('img');
-    img.setAttribute('src', 'pict_paly.png');
+    img.setAttribute('src', 'pict_play.png');
     // 次の曲に切り替え
     var activeli = document.querySelector('.active');
     var nextli = activeli.nextElementSibling;
